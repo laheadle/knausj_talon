@@ -1,12 +1,10 @@
 app.name: Emacs
 -
-hello chrome: "hello world"
-react: insert("import React from 'react';")
 fix it: key(ctrl-x)
 meet me: key(alt-x)
 #meet him: key(alt)
-save: key(ctrl-x ctrl-s)
-end of line: key(ctrl-e)
+(save it | save): key(ctrl-x ctrl-s)
+end of line: user.emacs_end_of_line()
 fetch it: key(alt-h)
 give up: key(ctrl-g)
 #go to end of buffer: (alt-shift->)
@@ -15,10 +13,15 @@ fetch in tree: key(ctrl-r)
 find file: key(ctrl-x ctrl-f)
 outline knew above: key(ctrl-u ctrl-enter alt-up)
 outline knew child: key(ctrl-enter alt-right)
-swim: key(space)
+clay: key(space)
+tax: key(tab)
+push:
+    user.emacs_end_of_line()
+    key(enter)
 undo: key(ctrl-shift-_)
 big jump:
     key(alt-x)
     insert("ace-jump-char-mode")
     key(enter)
 big jumper: user.emacs_command("ace-jump-char-mode")
+command emacs <user.text>: user.try_emacs_command(text)
