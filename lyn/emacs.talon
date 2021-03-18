@@ -8,12 +8,13 @@ buffer start: key(alt-shift-<)
 buffer last: key(ctrl-shift-<)
 buffer next: key(ctrl-shift->)
 buffer other: key(ctrl-x o)
-buffer find <user.text>:
+[cow] buffer find <user.text>:
      key(ctrl-b)
      user.emacs_might_insert(text)
-
 buffer kill: key(ctrl-x k)
 buffer only: key(ctrl-x 1)
+scissor new: key(ctrl-c & ctrl-n)
+scissor find: key(ctrl-c & ctrl-v)
 find file: key(ctrl-x ctrl-f)
 outline knew above: key(ctrl-u ctrl-enter alt-up)
 outline knew child: key(ctrl-enter alt-right)
@@ -24,7 +25,7 @@ tax: key(tab)
 push:
     user.emacs_end_of_line()
     key(enter)
-(trake | undo): key(ctrl-shift-_)
+(tickle | trake | undo): key(ctrl-shift-_)
 big jump:
     key(alt-x)
     insert("ace-jump-char-mode")
@@ -46,7 +47,7 @@ big jump:
 (cow | emacs) project file find <user.text>:
      key(ctrl-r)
      user.emacs_might_insert(text)
-(cow | emacs) project summary:
+(cow | emacs) project (summary | status):
      key(ctrl-.)
 (cow | emacs) project search <user.text>:
      key(ctrl-1 q)
