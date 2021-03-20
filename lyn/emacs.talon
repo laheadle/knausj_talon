@@ -36,7 +36,7 @@ big jump:
     key(enter)
 (big jumper) | (cow jump): user.emacs_command("ace-jump-char-mode")
 (cow | emacs) run <user.text>: user.try_emacs_command(text)
-(cow | emacs) find function <user.text>:
+(cow | emacs) function find <user.text>:
      user.emacs_command("find-function")
      user.emacs_might_insert(text)
 ((cow note find) | (note find)) <user.text>:
@@ -50,6 +50,10 @@ big jump:
      user.emacs_might_insert(text)
 buffer link copy: key(ctrl-c l)     
 buffer link paste: key(ctrl-c ctrl-l)     
+outside project file find <user.text>:
+        key(ctrl-x j f)
+        user.emacs_might_insert(text)
+        
 (cow | project) find <user.text>:
      key(ctrl-x j d)
      user.emacs_might_insert(text)
