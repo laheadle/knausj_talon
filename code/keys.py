@@ -139,8 +139,9 @@ punctuation_words = {
     "semicolon": ";",
     "colon": ":",
     "forward slash": "/",
+    "query": "?",
     "question mark": "?",
-    "exclamation mark": "!",
+    "goodness": "!",
     "exclamation point": "!",
     "dollar sign": "$",
     "asterisk": "*",
@@ -222,6 +223,7 @@ simple_keys = [
 ]
 
 alternate_keys = {
+    "spacer": "space",
     "delete": "backspace",
     "forward delete": "delete",
     #'junk': 'backspace',
