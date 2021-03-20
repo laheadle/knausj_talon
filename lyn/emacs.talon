@@ -168,3 +168,6 @@ complete: key(alt-/)
 
 folder rename: key(R)
 folder new: key("+")
+stash save: key(z z)
+stash index: key(z i)
+stash pop: key(z p)
