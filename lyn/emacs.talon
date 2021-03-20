@@ -171,3 +171,10 @@ folder new: key("+")
 stash save: key(z z)
 stash index: key(z i)
 stash pop: key(z p)
+cow boot:
+    key(alt-x)
+    insert("l-c-o")
+    key(enter)
+snippet drop <user.text>:
+        key(ctrl-c & ctrl-s)
+        user.emacs_might_insert(text)
