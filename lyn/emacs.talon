@@ -3,6 +3,7 @@ app.name: Emacs
 (save it | save): key(ctrl-x ctrl-s)
 end of line: user.emacs_end_of_line()
 give up: key(ctrl-g)
+buffer eval: user.emacs_command("eval-buffer")
 buffer end: key(alt-shift->)
 buffer start: key(alt-shift-<)
 buffer last: key(ctrl-shift-<)
@@ -14,9 +15,11 @@ buffer other: key(ctrl-x o)
 buffer kill: key(ctrl-x k)
 buffer only: key(ctrl-x 1)
 buffer focus: key(ctrl-l)
-scissor new: key(ctrl-c & ctrl-n)
-scissor find: key(ctrl-c & ctrl-v)
-file find <user.text>:
+# to do: use some lisp code to copy to the clipboard the name, for saving
+snippet new: key(ctrl-c & ctrl-n)
+snippet find: key(ctrl-c & ctrl-v)
+
+(file new | file find) <user.text>:
      key(ctrl-x ctrl-f)
      user.emacs_might_insert(text)
 
@@ -50,7 +53,7 @@ big jump:
      user.emacs_might_insert(text)
 buffer link copy: key(ctrl-c l)     
 buffer link paste: key(ctrl-c ctrl-l)     
-outside project file find <user.text>:
+project outside file find <user.text>:
         key(ctrl-x j f)
         user.emacs_might_insert(text)
         
@@ -66,6 +69,11 @@ outside project file find <user.text>:
      key(ctrl-1 q)
      sleep(100ms)     
      user.emacs_might_insert(text)
+(cow | project) folder search <user.text>:
+     key(ctrl-u ctrl-1 q enter enter)
+     sleep(100ms)     
+     user.emacs_might_insert(text)
+
 cow go <user.unmodified_key>:
     user.emacs_command("ace-jump-word-mode")
     key("{unmodified_key}")
@@ -94,9 +102,9 @@ line start: key(ctrl-a)
 line end: key(ctrl-e)
 line rest: key(alt-k)
 line all: key(ctrl-a ctrl-space ctrl-n ctrl-a alt-w ctrl-p)
-(cow | window) split right: key(ctrl-x 3)
-(cow | window) split none: key(ctrl-x 1)
-(cow | window) split down: key(ctrl-x 2)
+(cow | buffer) split right: key(ctrl-x 3)
+(cow | buffer) split none: key(ctrl-x 1)
+(cow | buffer) split down: key(ctrl-x 2)
 cow mark: key(ctrl-space)
 cow back: key(ctrl-u ctrl-space)
 ## https://github.com/mankoff/talon/blob/main/emacs/general.talon
@@ -158,7 +166,7 @@ search again: key(ctrl-s ctrl-s)
 
 search symbol at point: key(alt-s .)
 
-search and replace: key(ctrl-alt-%)
+buffer replace: key(ctrl-alt-%)
 
 occur [<user.text>]:
     key(alt-s o)
@@ -182,3 +190,4 @@ cow boot:
 snippet drop <user.text>:
         key(ctrl-c & ctrl-s)
         user.emacs_might_insert(text)
+

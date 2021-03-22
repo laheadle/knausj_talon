@@ -14,7 +14,8 @@ ctx.lists["user.ck"] = {
     "apostrophized": "'s",
     "healthy": "1990Theyearsme!",
     "electronic publication": "ePub",
-    "the factory": "ePub factory"
+    "the factory": "ePub factory",
+    "my email": "laheadle@gmail.com"
 }
 ctx.lists["user.my_modifiers"] = {
     "track": "alt",
