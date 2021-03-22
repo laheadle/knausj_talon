@@ -15,6 +15,7 @@ buffer other: key(ctrl-x o)
 buffer kill: key(ctrl-x k)
 buffer only: key(ctrl-x 1)
 buffer focus: key(ctrl-l)
+buffer temp: key(ctrl-b j j enter)
 # to do: use some lisp code to copy to the clipboard the name, for saving
 snippet new: key(ctrl-c & ctrl-n)
 snippet find: key(ctrl-c & ctrl-v)
@@ -27,12 +28,23 @@ outline knew above: key(ctrl-u ctrl-enter alt-up)
 outline knew child: key(ctrl-enter alt-right)
 (cow | outline) knew above: key(ctrl-u ctrl-enter alt-up)
 (cow | outline) knew child: key(ctrl-enter alt-right)
+outline cut: key(ctrl-c ctrl-x ctrl-w)
+outline copy: key(ctrl-c ctrl-x alt-w)
+outline yank: key(ctrl-c ctrl-x ctrl-y)
+
 clay: key(space)
 tax: key(tab)
 push:
     user.emacs_end_of_line()
     key(enter)
-(tickle | trake | undo): key(ctrl-shift-_)
+tickle: key(ctrl-shift-_)
+undo: key(ctrl-x u d)
+git blame: key(alt-x m a g i t - b l a m e - p o p u p enter b)
+git file log:
+    user.try_emacs_command("magit-log-buffer-file")
+    key(enter)
+git file log done:
+    key(l = f q q)
 big jump:
     key(alt-x)
     insert("ace-jump-char-mode")
