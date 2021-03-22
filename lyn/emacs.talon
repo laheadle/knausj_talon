@@ -1,4 +1,4 @@
-app.name: Emacs
+app.name: vcxsrv.exe
 -
 (save it | save): key(ctrl-x ctrl-s)
 end of line: user.emacs_end_of_line()
