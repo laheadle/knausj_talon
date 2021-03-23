@@ -27,7 +27,7 @@ outline knew above: key(ctrl-u ctrl-enter alt-up)
 outline knew child: key(ctrl-enter alt-right)
 (cow | outline) knew above: key(ctrl-u ctrl-enter alt-up)
 (cow | outline) knew child: key(ctrl-enter alt-right)
-outline cut: key(ctrl-c ctrl-x ctrl-w)
+outline kill: key(ctrl-c ctrl-x ctrl-w)
 outline copy: key(ctrl-c ctrl-x alt-w)
 outline yank: key(ctrl-c ctrl-x ctrl-y)
 
@@ -66,7 +66,7 @@ big jump:
      key(ctrl-s)
      user.emacs_might_insert(text)
 buffer link copy: key(ctrl-c l)     
-buffer link paste: key(ctrl-c ctrl-l)     
+buffer link yank: key(ctrl-c ctrl-l)     
 project outside file find <user.text>:
         key(ctrl-x j f)
         user.emacs_might_insert(text)
