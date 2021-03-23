@@ -3,6 +3,7 @@ app.name: vcxsrv.exe
 (save it | save): key(ctrl-x ctrl-s)
 end of line: user.emacs_end_of_line()
 give up: key(ctrl-g)
+express evaluate: key(ctrl-x ctrl-e)
 buffer eval: user.emacs_command("eval-buffer")
 buffer end: key(alt-shift->)
 buffer start: key(alt-shift-<)
@@ -17,8 +18,6 @@ buffer only: key(ctrl-x 1)
 buffer focus: key(ctrl-l)
 buffer temp: key(ctrl-b j j enter)
 # to do: use some lisp code to copy to the clipboard the name, for saving
-snippet new: key(ctrl-c & ctrl-n)
-snippet find: key(ctrl-c & ctrl-v)
 
 (file new | file find) <user.text>:
      key(ctrl-x ctrl-f)
@@ -53,6 +52,9 @@ big jump:
 (cow | emacs) run <user.text>: user.try_emacs_command(text)
 (cow | emacs) function find <user.text>:
      user.emacs_command("find-function")
+     user.emacs_might_insert(text)
+(cow | emacs) function help <user.text>:
+     user.emacs_command("counsel-describe-function")
      user.emacs_might_insert(text)
 ((cow note find) | (note find)) <user.text>:
      key(ctrl-c n b)
@@ -114,6 +116,7 @@ line start: key(ctrl-a)
 line end: key(ctrl-e)
 line rest: key(alt-k)
 line all: key(ctrl-a ctrl-space ctrl-n ctrl-a alt-w ctrl-p)
+line strip: key(ctrl-a alt-\ ctrl-e alt-\)
 (cow | buffer) split right: key(ctrl-x 3)
 (cow | buffer) split none: key(ctrl-x 1)
 (cow | buffer) split down: key(ctrl-x 2)
@@ -165,6 +168,8 @@ action(edit.file_end):
 submit:  key(ctrl-c ctrl-c)
 discard: key(ctrl-c ctrl-k)
 
+line follow down: key(ctrl-alt-n)
+line follow up: key(ctrl-alt-p)
 
 search [forward] [<user.text>]:
     key(ctrl-s)
@@ -203,3 +208,9 @@ snippet drop <user.text>:
         key(ctrl-c & ctrl-s)
         user.emacs_might_insert(text)
 
+snippet new:
+        key(ctrl-x j d)
+        insert("snippets")
+        key(enter)
+        key(ctrl-x ctrl-f)
+snippet find: key(ctrl-c & ctrl-v)
