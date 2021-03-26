@@ -32,3 +32,8 @@ resume:
   insert("fg")
   key(enter)
 
+buffer switch:
+       key(cmd-a cmd-c cmd-k)
+       user.switcher_focus("emacs")
+       key(ctrl-b j j enter)
+       key(ctrl-y)

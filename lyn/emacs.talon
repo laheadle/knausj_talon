@@ -3,6 +3,11 @@ app.name: vcxsrv.exe
 (save it | save): key(ctrl-x ctrl-s)
 end of line: user.emacs_end_of_line()
 give up: key(ctrl-g)
+block new javascript:
+      key(ctrl-c ctrl-, s)
+      insert("javascript")
+block new example:
+      key(ctrl-c ctrl-, e)
 express evaluate: key(ctrl-x ctrl-e)
 buffer eval: user.emacs_command("eval-buffer")
 buffer end: key(alt-shift->)
