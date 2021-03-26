@@ -17,10 +17,7 @@ ctx.lists["user.ck"] = {
     "the factory": "ePub factory",
     "my email": "laheadle@gmail.com"
 }
-ctx.lists["user.my_modifiers"] = {
-    "track": "alt",
-    "truck": "ctrl"
-}
+
 @mod.capture(rule="{user.my_modifiers}")
 def my_modifiers(m) -> str:
     # for example if the user says backs then m is control
