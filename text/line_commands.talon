@@ -26,9 +26,6 @@ copy [line] <number>:
 copy <number> until <number>: 
     user.select_range(number_1, number_2)
     edit.copy()
-cut [line] <number>: 
-    user.select_range(number, number)
-    edit.cut()
 cut [line] <number> until <number>: 
     user.select_range(number_1, number_2)
     edit.cut()

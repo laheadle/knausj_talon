@@ -214,3 +214,4 @@ snippet new:
         key(enter)
         key(ctrl-x ctrl-f)
 snippet find: key(ctrl-c & ctrl-v)
+region (up | expand): key(ctrl-@)
