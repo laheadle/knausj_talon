@@ -189,12 +189,10 @@ symbol_key_words = {
     "greater than": ">",
     "star": "*",
     "pound": "#",
-    "hash": "#",
     "percent": "%",
     "caret": "^",
     "amper": "&",
     "pipe": "|",
-    "dubquote": '"',
     "double quote": '"',
 }
 
@@ -223,7 +221,7 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "spacer": "space",
+    "space it": "space",
     "delete": "backspace",
     "forward delete": "delete",
     #'junk': 'backspace',

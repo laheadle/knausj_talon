@@ -9,7 +9,7 @@ block new javascript:
 block new example:
       key(ctrl-c ctrl-, e)
 express evaluate: key(ctrl-x ctrl-e)
-buffer eval: user.emacs_command("eval-buffer")
+buffer (eval | evaluate): user.emacs_command("eval-buffer")
 buffer end: key(alt-shift->)
 buffer start: key(alt-shift-<)
 buffer last: key(ctrl-shift-<)
@@ -168,7 +168,6 @@ action(edit.file_start):
 action(edit.file_end):
         key(alt-shift->)
 
-(deed|deer|dear|dired): key(ctrl-x D)
 
 submit:  key(ctrl-c ctrl-c)
 discard: key(ctrl-c ctrl-k)
@@ -220,3 +219,6 @@ snippet new:
         key(ctrl-x ctrl-f)
 snippet find: key(ctrl-c & ctrl-v)
 region (up | expand): key(ctrl-@)
+
+lispy ace paren:
+      user.emacs_command("lispy-ace-paren")
