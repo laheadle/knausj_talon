@@ -1,13 +1,16 @@
-app.name: vcxsrv.exe
+#app.name: vcxsrv.exe
+app.name: Emacs
 -
 (save it | save): key(ctrl-x ctrl-s)
 end of line: user.emacs_end_of_line()
 give up: key(ctrl-g)
+narrow it: key(ctrl-x t n)
 block new javascript:
       key(ctrl-c ctrl-, s)
       insert("javascript")
+      key(enter)
 block new example:
-      key(ctrl-c ctrl-, e)
+      key(ctrl-c ctrl-, e enter up)
 express evaluate: key(ctrl-x ctrl-e)
 buffer (eval | evaluate): user.emacs_command("eval-buffer")
 buffer end: key(alt-shift->)
@@ -70,7 +73,8 @@ big jump:
 ((cow search) | (buffer search)) <user.text> [over]:
      key(ctrl-s)
      user.emacs_might_insert(text)
-buffer link copy: key(ctrl-c l)     
+buffer link copy: key(ctrl-c l)
+buffer link rename: key(ctrl-c ctrl-l)
 buffer link yank: key(ctrl-c ctrl-l)     
 project outside file find <user.text>:
         key(ctrl-x j f)
