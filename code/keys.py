@@ -212,7 +212,7 @@ simple_keys = [
     "pakafend",
     "enter",
     "escape",
-    "home",
+    "homeboy",
     "insert",
     "pagedown",
     "pageup",
