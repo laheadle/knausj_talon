@@ -116,7 +116,7 @@ modifier_keys = {
     "alter": "alt",  #'alter': 'alt',
     "troll": "ctrl",  #'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
-    "super": "super",
+    "superduper": "super",
 }
 if app.platform  == "mac":
     modifier_keys["command"] = "cmd"
