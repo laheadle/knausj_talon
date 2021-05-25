@@ -222,6 +222,7 @@ simple_keys = [
 
 alternate_keys = {
     "space it": "space",
+    "tabby": "tab",
     "delete": "backspace",
     "forward delete": "delete",
     #'junk': 'backspace',
