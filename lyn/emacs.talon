@@ -193,10 +193,6 @@ search symbol at point: key(alt-s .)
 
 buffer replace: key(ctrl-alt-%)
 
-occur [<user.text>]:
-    key(alt-s o)
-    insert(text or '')
-
 complete: key(alt-/)
 
 
