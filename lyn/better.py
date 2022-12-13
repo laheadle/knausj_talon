@@ -22,7 +22,8 @@ final_dictionary = {
     "apostrophized": "'s",
     "electronic publication": "ePub",
     "the factory": "ePub factory",
-    "my email": "laheadle@gmail.com"
+    "my email": "laheadle@gmail.com",
+    "work email": "lyn.headley@mheducation.com"
 }
 final_dictionary.update(secret_dictionary)
 
