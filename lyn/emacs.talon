@@ -18,9 +18,6 @@ buffer start: key(alt-shift-<)
 buffer last: key(ctrl-shift-<)
 buffer next: key(ctrl-shift->)
 buffer other: key(ctrl-x o)
-[cow] buffer find <user.text>:
-     key(ctrl-b)
-     user.emacs_might_insert(text)
 buffer kill: key(ctrl-x k)
 buffer only: key(ctrl-x 1)
 buffer focus: key(ctrl-l)
@@ -33,8 +30,6 @@ buffer temp: key(ctrl-b j j enter)
 
 outline knew above: key(ctrl-u ctrl-enter alt-up)
 outline knew child: key(ctrl-enter alt-right)
-(cow | outline) knew above: key(ctrl-u ctrl-enter alt-up)
-(cow | outline) knew child: key(ctrl-enter alt-right)
 outline kill: key(ctrl-c ctrl-x ctrl-w)
 outline copy: key(ctrl-c ctrl-x alt-w)
 outline yank: key(ctrl-c ctrl-x ctrl-y)
@@ -57,49 +52,6 @@ big jump:
     insert("ace-jump-char-mode")
     key(enter)
 (big jumper) | (cow jump): user.emacs_command("ace-jump-char-mode")
-(cow | emacs) run <user.text>: user.try_emacs_command(text)
-(cow | emacs) function find <user.text>:
-     user.emacs_command("find-function")
-     user.emacs_might_insert(text)
-(cow | emacs) function help <user.text>:
-     user.emacs_command("counsel-describe-function")
-     user.emacs_might_insert(text)
-((cow note find) | (note find)) <user.text>:
-     key(ctrl-c n b)
-     user.emacs_might_insert(text)
-((cow note file find) | (note file find)) <user.text>:
-     key(ctrl-c n f)
-     user.emacs_might_insert(text)
-((cow search) | (buffer search)) <user.text> [over]:
-     key(ctrl-s)
-     user.emacs_might_insert(text)
-buffer link copy: key(ctrl-c l)
-buffer link rename: key(ctrl-c ctrl-l)
-buffer link yank: key(ctrl-c ctrl-l)     
-project outside file find <user.text>:
-        key(ctrl-x j f)
-        user.emacs_might_insert(text)
-        
-(cow | project) find <user.text>:
-     key(ctrl-x j d)
-     user.emacs_might_insert(text)
-(cow | project) file find <user.text>:
-     key(ctrl-r)
-     user.emacs_might_insert(text)
-(cow | project) (summary | status):
-     key(ctrl-.)
-(cow | project) search <user.text>:
-     key(ctrl-1 q)
-     sleep(100ms)     
-     user.emacs_might_insert(text)
-(cow | project) folder search <user.text>:
-     key(ctrl-u ctrl-1 q enter enter)
-     sleep(100ms)     
-     user.emacs_might_insert(text)
-
-cow go <user.unmodified_key>:
-    user.emacs_command("ace-jump-word-mode")
-    key("{unmodified_key}")
     
 cover: key(ctrl-d)
 word right: key(alt-f)
@@ -126,12 +78,6 @@ line end: key(ctrl-e)
 line rest: key(alt-k)
 line all: key(ctrl-a ctrl-space ctrl-n ctrl-a alt-w ctrl-p)
 line strip: key(ctrl-a alt-\ ctrl-e alt-\)
-(cow | buffer) split right: key(ctrl-x 3)
-(cow | buffer) split none: key(ctrl-x 1)
-(cow | buffer) split down: key(ctrl-x 2)
-cow mark: key(ctrl-space)
-cow back: key(ctrl-u ctrl-space)
-## https://github.com/mankoff/talon/blob/main/emacs/general.talon
 
 go [line] <number>$:
     key(alt-g g)

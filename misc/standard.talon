@@ -25,6 +25,3 @@ wipe: key(backspace)
 padding: 
 	insert("  ") 
 	key(left)
-slap:
-	edit.line_end()
-	key(enter)
