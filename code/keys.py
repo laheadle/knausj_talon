@@ -119,7 +119,7 @@ modifier_keys = {
     "superduper": "super",
 }
 if app.platform  == "mac":
-    modifier_keys["command"] = "cmd"
+    modifier_keys["tim"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
 alphabet = dict(zip(default_alphabet, letters_string))
