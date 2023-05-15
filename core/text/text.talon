@@ -1,5 +1,5 @@
 #provide both anchored and unachored commands via 'over'
-phrase <user.text>$:
+fuzzy <user.text>$:
     user.add_phrase_to_history(text)
     insert(text)
 phrase <user.text> over:
@@ -10,9 +10,6 @@ phrase <user.text> over:
 <user.format_text>+$: user.insert_many(format_text_list)
 <user.format_text>+ over: user.insert_many(format_text_list)
 <user.formatters> that: user.formatters_reformat_selection(user.formatters)
-word <user.word>:
-    user.add_phrase_to_history(word)
-    insert(word)
 proud <user.word>: user.insert_formatted(word, "CAPITALIZE_FIRST_WORD")
 recent list: user.toggle_phrase_history()
 recent close: user.phrase_history_hide()

@@ -123,13 +123,13 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
+    "alter": "alt",  #'alter': 'alt',
+    "troll": "ctrl",  #'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
-    "super": "super",
+    "superduper": "super",
 }
 if app.platform == "mac":
-    modifier_keys["command"] = "cmd"
+    modifier_keys["tim"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
 ctx.lists["self.letter"] = alphabet_list
@@ -142,19 +142,14 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
-    "comma": ",",
-    # Workaround for issue with conformer b-series; see #946
-    "coma": ",",
     "period": ".",
     "full stop": ".",
     "semicolon": ";",
-    "colon": ":",
+    "the colon": ":",
     "forward slash": "/",
-    "question mark": "?",
-    "exclamation mark": "!",
-    "exclamation point": "!",
+    "goodness": "!",
     "asterisk": "*",
-    "hash sign": "#",
+    "pound": "#",
     "number sign": "#",
     "percent sign": "%",
     "at sign": "@",
@@ -162,7 +157,7 @@ punctuation_words = {
     "ampersand": "&",
     # Currencies
     "dollar sign": "$",
-    "pound sign": "£",
+#    "pound sign": "£",
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
@@ -170,14 +165,14 @@ punctuation_words = {
     "right paren": ")",
 }
 symbol_key_words = {
-    "dot": ".",
+    "query": "?",
     "point": ".",
     "quote": "'",
-    "question": "?",
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",
     "square": "[",
+    "careful": ",",
     "R square": "]",
     "right square": "]",
     "slash": "/",
@@ -192,7 +187,7 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
-    "brace": "{",
+    "bracer": "{",
     "left brace": "{",
     "brack": "{",
     "bracket": "{",
@@ -210,16 +205,15 @@ symbol_key_words = {
     "right angle": ">",
     "greater than": ">",
     "star": "*",
-    "hash": "#",
     "percent": "%",
     "caret": "^",
     "amper": "&",
     "pipe": "|",
-    "dub quote": '"',
+    "dublin": '"',
     "double quote": '"',
     # Currencies
     "dollar": "$",
-    "pound": "£",
+#    "pound": "£",
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -235,10 +229,10 @@ ctx.lists["self.arrow_key"] = {
 }
 
 simple_keys = [
-    "end",
+    "pakafend",
     "enter",
     "escape",
-    "home",
+    "homeboy",
     "insert",
     "pagedown",
     "pageup",
@@ -247,7 +241,9 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "wipe": "backspace",
+    "delta": "backspace",
+    "space it": "space",
+    "tabby": "tab",
     "delete": "backspace",
     #'junk': 'backspace',
     "forward delete": "delete",
